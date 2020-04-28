@@ -2,14 +2,14 @@ from PIL import Image, ImageOps
 
 def recode_image(file_location):
     decoded_image = Image.open("decoded_image.png")
-    red_channel = encoded_image.split()[0]
+    red_channel = decoded_image.split()[0]
     
     x_size = decoded_image.size[0]
     y_size = decoded_image.size[1]
     print("x_size: ", x_size)
     print("y_size: ", y_size)
-    recoded_image = Image.new("RGB", encoded_image.size)
-    pixels = decoded_image.load()
+    recoded_image = Image.new("RGB", decoded_image.size)
+    pixels = recoded_image.load()
     
     #TODO: Fill in decoding functionality
     print("red_channel: ", red_channel.getdata())
